@@ -19,18 +19,21 @@ export const Header = () => {
           </div>
           
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#accueil" className="text-foreground hover:text-primary transition-colors">
+            <a href="#accueil" className="text-foreground hover:text-primary transition-colors cursor-pointer">
               Accueil
             </a>
-            <a href="#services" className="text-foreground hover:text-primary transition-colors">
+            <a href="#services" className="text-foreground hover:text-primary transition-colors cursor-pointer">
               Services
             </a>
-            <a href="#apropos" className="text-foreground hover:text-primary transition-colors">
+            <a href="#apropos" className="text-foreground hover:text-primary transition-colors cursor-pointer">
               À Propos
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+            <button 
+              onClick={() => setIsDevisOpen(true)} 
+              className="text-foreground hover:text-primary transition-colors cursor-pointer"
+            >
               Contact
-            </a>
+            </button>
           </nav>
 
           <div className="flex items-center gap-4">
