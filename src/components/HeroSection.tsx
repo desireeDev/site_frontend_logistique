@@ -1,9 +1,20 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-logistics.jpg";
+import { ContactForm } from "./ContactForm";
 
 export const HeroSection = () => {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
+  const scrollToServices = () => {
+    const servicesSection = document.getElementById('services');
+    servicesSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
   return (
+    <>
+      <ContactForm open={isContactOpen} onOpenChange={setIsContactOpen} type="contact" />
     <section className="relative min-h-[600px] flex items-center bg-primary overflow-hidden">
       <div 
         className="absolute inset-0 opacity-20"
@@ -34,16 +45,22 @@ export const HeroSection = () => {
           </p>
           
           <div className="flex flex-wrap gap-4">
-            <Button variant="hero" size="lg" className="group">
+            <Button variant="hero" size="lg" className="group" onClick={scrollToServices}>
               Découvrir nos Services
               <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </Button>
-            <Button variant="outline" size="lg" className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/20">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="bg-primary-foreground/10 border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/20"
+              onClick={() => setIsContactOpen(true)}
+            >
               Nous Contacter
             </Button>
           </div>
         </div>
       </div>
     </section>
+    </>
   );
 };
