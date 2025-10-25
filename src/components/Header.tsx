@@ -28,12 +28,7 @@ export const Header = () => {
             <a href="#apropos" className="text-foreground hover:text-primary transition-colors cursor-pointer">
               À Propos
             </a>
-            <button 
-              onClick={() => setIsDevisOpen(true)} 
-              className="text-foreground hover:text-primary transition-colors cursor-pointer"
-            >
-              Contact
-            </button>
+        
           </nav>
 
           <div className="flex items-center gap-4">

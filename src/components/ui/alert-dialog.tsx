@@ -1,6 +1,6 @@
 import * as React from "react";
 import * as AlertDialogPrimitive from "@radix-ui/react-alert-dialog";
-
+//Ui Alert Dialog basé sur Radix UI et Tailwind CSS
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 
