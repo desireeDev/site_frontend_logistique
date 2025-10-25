@@ -5,7 +5,7 @@ import { ServicesSection } from "@/components/ServicesSection";
 import { FeaturesSection } from "@/components/FeaturesSection";
 import { AboutSection } from "@/components/AboutSection";
 import { Footer } from "@/components/Footer";
-
+//Appelle nos pages principales pour construire la page d'accueil
 const Index = () => {
   return (
     <div className="min-h-screen">
