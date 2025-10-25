@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+//Définir la configuration de Tailwind CSS de notre application
 export default {
   darkMode: ["class"],
   content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
