@@ -1,3 +1,6 @@
+
+// src/components/ui/badge.tsx
+//Uitaire Badge avec des variantes de style
 import * as React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 
